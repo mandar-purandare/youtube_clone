@@ -3,8 +3,13 @@ import youtube_logo from './images/youtube_logo.png'
 import handicam_icon from './images/handicam_icon.png'
 import bell_icon from './images/bell_icon.png'
 import './TopNav.css'
+import { useNavigate } from "react-router-dom";
 
 function TopNav() {
+    const router = useNavigate();
+    function goTo(path){
+        router('/'+path);
+    }
   return (
     <div>
         <nav className="top-nav">
@@ -32,7 +37,7 @@ function TopNav() {
                         {/* <img src={bell_icon}/> */}
                         <i class="fa-regular fa-bell"></i>
                     </div>
-                    <div>
+                    <div onClick={() => goTo('signin')}>
                     <i class="fa-solid fa-user"></i>
                     </div>
                 </div>

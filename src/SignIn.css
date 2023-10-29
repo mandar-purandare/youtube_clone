@@ -1,0 +1,122 @@
+.sign-in-container{
+    height: 605px;
+}
+
+.sign-in-card{
+    height: 80%;
+    width: 33%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 0.5em;
+}
+
+#google-logo{
+    margin-top: 7%;
+    margin-bottom: 0%;
+}
+
+.sign-in-container h3{
+    font-size: 1.5em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-weight: 400;
+}
+
+.email-phone-div{
+    border: 1px solid gray;
+    border-radius: 0.25em;
+    height: 12%;
+    width: 80%;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.email-phone-div input{
+    float: left;
+    margin-left: 5%;
+    height: 50%;
+    margin-top: 2%;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+.email-phone-div-blue{
+    border: 1px solid blue;
+    border-radius: 0.25em;
+    height: 12%;
+    width: 80%;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.email-phone-div-blue input{
+    float: left;
+    margin-left: 5%;
+    height: 50%;
+    margin-top: 2%;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+#forgot-email{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    color: blue;
+}
+
+#guest-mode{
+    width: 85%;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 0.9em;
+    margin-bottom: 0%;
+    margin-top: 10%;
+}
+
+#learn-more{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 0%;
+    color: blue;
+}
+
+#create-acc-next-btn-div{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+#create-acc-next-btn-div button{
+    height: 2.5em;
+    width: 6em;
+    font-weight: 600;
+    background-color:rgb(66,133,244);
+    border: none;
+    color: white;
+    border-radius: 0.25em;
+}
+
+#bottom-options{
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+    margin: auto;
+}
+
+#bottom-options select{
+    border: none;
+}
+
+#bottom-options li{
+    font-size: 0.9em;
+    padding: 0em 0.5em;
+}
+
+#bottom-options ul{
+    display: flex;
+}
