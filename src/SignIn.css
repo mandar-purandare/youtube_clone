@@ -41,13 +41,13 @@
     outline: none;
 }
 
-.email-phone-div-blue{
+.blue-border{
     border: 1px solid blue;
-    border-radius: 0.25em;
+    /* border-radius: 0.25em;
     height: 12%;
     width: 80%;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 7%; */
 }
 
 .email-phone-div-blue input{
