@@ -20,8 +20,13 @@ import anatoly_2 from './images/anatoly_2.png'
 import anatoly_3 from './images/anatoly_3.png'
 import anatoly_4 from './images/anatoly_4.png'
 import steve_harvey from './images/steve_harvey.png'
+import { useNavigate } from "react-router-dom";
 
 function Home(){
+    const router = useNavigate();
+    function goTo(id){
+        router(`/video/${id}`);
+    }
     const profileMenuArray = [{icon: home_icon, text:'Home'},{icon: shorts_icon, text:'Shorts'},{icon: subscriptions_icon, text:'Subscriptions'}];
     const userMenuArray = [{icon: your_channel_icon, text:'Your channel'},{icon: history_icon, text:'History'},{icon: your_videos_icon, text:'Your videos'},{icon: watch_later_icon, text:'Watch Later'}];
     const videoGalleryNavArray = ['All','Music','Python','Mixes','Overhead press','Protein','News','T-Series','Live','Steve Harvey','Server'];
@@ -70,8 +75,8 @@ function Home(){
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div className="video-grid">
-                        {videoTemplateArray.map(obj => (
-                            <div className="video-template">
+                        {videoTemplateArray.map((obj,i) => (
+                            <div className="video-template" onClick={() => goTo(i)}>
                                 <div className="">
                                     <img src={obj.img}/>
                                 </div>
