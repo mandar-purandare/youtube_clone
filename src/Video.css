@@ -1,0 +1,128 @@
+.video-container{
+    height: 2000px;
+}
+
+#video-body{
+    margin-top: 6%;
+    height: 100%;
+}
+
+#video-body-left{
+    width: 65%;
+    height: 90%;
+    border: 1px solid black;
+}
+
+#video-screen{
+    height: 25%;
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-left: 5%;
+}
+
+#video-title{
+    font-size: 1.20em;
+}
+
+#video-actions{
+    display: flex;
+    justify-content: space-between;
+    height: 3%;
+    width: 95%;
+    margin-left: 5%;
+    border: 1px solid black;
+}
+
+#video-actions > div:nth-child(1){
+    width: 35%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+#channel-pic-title{
+    display: flex;
+    width: 55%;
+    border: 1px solid black;
+}
+
+#channel-pic{
+   width: 30%;
+   height: 90%;
+   border: 1px solid black; 
+   border-radius: 50%;
+}
+
+#channel-title{
+    border: 1px solid black; 
+    width: 80%;
+}
+
+#channel-title > h4{
+    margin: 0;
+}
+
+#channel-title > p{
+    font-size: 0.8em;
+    margin-top: 0;
+}
+
+#subscribe-button{
+    border-radius: 1.5em;
+    height: 65%;
+    margin-top: 2.5%;
+    padding: 0.60em 1em 0.75em 1em;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+#video-actions > div:nth-child(2){
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-action-buttons{
+    background-color: rgb(242,242,242);
+    border: 1px solid black;
+    height: 50%;
+    margin-top: 2%;
+    padding: 0.20em;
+    border-radius: 1em;
+}
+
+.video-action-buttons > *{
+    padding: 0.25em;
+}
+
+.round-btn{
+    border-radius: 50%;
+    width: 7%;
+}
+
+#video-captions{
+    background-color: rgb(242,242,242);
+    width: 95%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+#video-captions > p > *{
+    /* padding: 0.25em; */
+    margin: 0em 0.5em;
+}
+
+#comments-sort-by{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+#comments-sort-by h3{
+    margin-right: 4%;
+}
