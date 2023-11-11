@@ -1,13 +1,6 @@
 import React from "react";
 import './Home.css'
 import TopNav from "./TopNav";
-import home_icon from './images/house_icon.png'
-import shorts_icon from './images/youtube-shorts-logo-15252.png'
-import subscriptions_icon from './images/subscriptions_icon.png'
-import your_channel_icon from './images/your_channel_icon.png'
-import history_icon from './images/history_icon.png'
-import your_videos_icon from './images/your_videos_icon.png'
-import watch_later_icon from './images/watch_later_icon.png'
 import bigmuscle from './images/big_musc_nutri.png'
 import tanay_pratap from './images/tanay_pratap.png'
 import amul_whey from './images/amul_whey.png'
@@ -21,14 +14,14 @@ import anatoly_3 from './images/anatoly_3.png'
 import anatoly_4 from './images/anatoly_4.png'
 import steve_harvey from './images/steve_harvey.png'
 import { useNavigate } from "react-router-dom";
+import LeftMenu from "./LeftMenu";
 
 function Home(){
     const router = useNavigate();
     function goTo(id){
         router(`/video/${id}`);
     }
-    const profileMenuArray = [{icon: home_icon, text:'Home'},{icon: shorts_icon, text:'Shorts'},{icon: subscriptions_icon, text:'Subscriptions'}];
-    const userMenuArray = [{icon: your_channel_icon, text:'Your channel'},{icon: history_icon, text:'History'},{icon: your_videos_icon, text:'Your videos'},{icon: watch_later_icon, text:'Watch Later'}];
+
     const videoGalleryNavArray = ['All','Music','Python','Mixes','Overhead press','Protein','News','T-Series','Live','Steve Harvey','Server'];
     const videoTemplateArray = [
                                     {img: bigmuscle,title:'100% Genuine Products. Free Gift With Every Purchase. Free shipping',small_title:'Sponsored. BigMuscles Nutrition'},
@@ -47,24 +40,7 @@ function Home(){
         <div className="home-container">
             <TopNav/>
             <div className="content">
-                <div className="left-menu">
-                    <div className="side-menu">
-                        <ul>
-                            {profileMenuArray.map(obj => (
-                                <li><div><img src={obj.icon}/></div>{obj.text}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="side-menu">
-                        <h3>You <i class="fa-solid fa-chevron-right"></i></h3>
-                        <ul>
-                            {userMenuArray.map(obj => (
-                                <li><div><img src={obj.icon}/></div>{obj.text}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    {/* <div className="subscriptions-menu"></div> */}
-                </div>
+                <LeftMenu/>
                 <div className="video-gallery">
                     <div className="video-gallery-nav">
                         <ul>

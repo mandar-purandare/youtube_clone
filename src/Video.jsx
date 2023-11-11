@@ -15,6 +15,20 @@ import apna_college_thumbnail from './images/video-page/apna_college_thumbnail.p
 
 function Video(){
     let {id} = useParams();
+
+    let videoObj = {url: 'https://www.youtube.com/embed/BBkFLEN2G6A', 
+                    title:'Earn 54,166 per month from HOME | Data Analyst Roadmap 2024 | Tanay Pratap Hindi', 
+                    channel_pic: tanay_pratap_pic,
+                    channel_name: 'Tanay Pratap', 
+                    subscribers:'228K subscribers',
+                    likes:'4.8K', 
+                    dislikes:'', 
+                    views:'80K', 
+                    time:'11 days ago', 
+                    comments:'726 comments', 
+                    hashtag:'#dataanalyst#tanaypratap#data', 
+                    captions:''}
+
     const commentsArray = [{comment_user_pic: commenter_1,comment_user_id:'@fourbytes', comment_text:`I am a Tech Lead in Machine Learning, here's the true insights. 1. Data Cleaning is the truth. You have to do the hard work. 
     2. Insights and pattern recognition is important before even thinking about machine learning. Statistics pure dil se ana chahiye.`, comment_time:'11 days ago', likes: '72', dislikes: '', replies: '26 replies', reply_pic: tanay_pratap_pic},
                            {comment_user_pic: commenter_2,comment_user_id:'@mahfoozalam281', comment_text:`Thanks bhaiya for educating
@@ -31,28 +45,28 @@ function Video(){
             <div id="video-body">
                 <section id="video-body-left">
                     {/* <div id="video-screen"><img src={video_start_frame}/></div> */}
-                    <iframe id="video-screen" src="https://www.youtube.com/embed/BBkFLEN2G6A"></iframe>
-                    <h2 id="video-title">Earn 54,166 per month from HOME | Data Analyst Roadmap 2024 | Tanay Pratap Hindi</h2>
+                    <iframe id="video-screen" src={videoObj.url}></iframe>
+                    <h2 id="video-title">{videoObj.title}</h2>
                     <div id="video-actions">
                         <div>
                             <div id="channel-pic-title">
-                                <div id="channel-pic"><img src={tanay_pratap_pic}/></div>
+                                <div id="channel-pic"><img src={videoObj.channel_pic}/></div>
                                 <div id="channel-title">
-                                    <h4>Tanay Pratap</h4>
-                                    <p id="channel-subscribers">228K subscribers</p>
+                                    <h4>{videoObj.channel_name}</h4>
+                                    <p id="channel-subscribers">{videoObj.subscribers}</p>
                                 </div>
                             </div>
                             <button id="subscribe-button">Subscribe</button>
                         </div>
                         <div>
-                            <div className="video-action-buttons"><i class="fa-regular fa-thumbs-up"></i><span>4.8K</span> | <i class="fa-regular fa-thumbs-down"></i></div>
+                            <div className="video-action-buttons"><i class="fa-regular fa-thumbs-up"></i><span>{videoObj.likes}</span> | <i class="fa-regular fa-thumbs-down"></i></div><span>{videoObj.dislikes}</span>
                             <div className="video-action-buttons"><i class="fa-solid fa-share"></i><span>Share</span></div>
                             <div className="video-action-buttons"><i class="fa-solid fa-download"></i><span>Download</span></div>
                             <div className="video-action-buttons round-btn">...</div>
                         </div>
                     </div>
                     <div id="video-captions">
-                        <p><span>80K views</span><span>11 days ago</span><span>#dataanalyst#tanaypratap#data</span></p>
+                        <p><span>{videoObj.views}</span><span>{videoObj.time}</span><span>{videoObj.hashtag}</span></p>
                         <p>In this Lambi lakeer video, understand how you can become a data analyst and what things to focus on early!</p>
                         <p>See more..</p>
                     </div>
