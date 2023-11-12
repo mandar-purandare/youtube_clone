@@ -1,4 +1,9 @@
+.history-body{
+    display: flex;
+}
+
 .history-video-list{
+    width: 50%;
     padding-top: 5%;
     text-align: left;
     margin-left: 20%;
@@ -6,17 +11,27 @@
 }
 
 .history-video-template{
-    width: 55%;
+    width: 90%;
     height: 7em;
     display: flex;
     /* justify-content: space-around; */
 }
 
 .history-video-screen{
-    width: 65%;
+    width: 400px;
     height: 80%;
     margin-top: 1%;
     border-radius: 0.25em;
+}
+
+.history-video-screen img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25em;
+}
+
+.history-video-info{
+    width: 100%;
 }
 
 .history-video-info h4{
@@ -31,4 +46,43 @@
 .history-video-info p{
     font-size: 0.5em;
     margin-left: 4%;
+}
+
+.history-manage{
+    height: 100%;
+    width: 30%;
+    padding-top: 15%;
+    position: fixed;
+    margin-left: 70%;
+    padding-left: 1%;
+}
+
+#history-search-input{
+    width: 60%;
+    margin-left: 10%;
+    /* margin-left: 5%; */
+    border-bottom: 1px solid black;
+}
+
+#history-search-input input{
+    height: 2em;
+    margin-right: 10%;
+    margin-left: 5%;
+    border: none;
+    outline: none;
+}
+
+.history-manage-list{
+    text-align: left;
+    font-weight: 500;
+    /* border: 1px solid black; */
+
+}
+
+.history-manage-list li{
+    padding: 0.7em 0px 0.7em 0px;
+}
+
+.li-with-icons i{
+    margin-right: 5%;
 }

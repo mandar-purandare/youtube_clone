@@ -7,8 +7,22 @@ import your_channel_icon from './images/your_channel_icon.png'
 import history_icon from './images/history_icon.png'
 import your_videos_icon from './images/your_videos_icon.png'
 import watch_later_icon from './images/watch_later_icon.png'
+import { useNavigate } from 'react-router-dom'
 
 function LeftMenu() {
+
+    const router = useNavigate();
+
+    function goTo(text){
+        let lowerCase = text.toLowerCase();
+       
+        lowerCase = lowerCase.replaceAll(" ","-")
+
+        if(lowerCase === "home"){
+            lowerCase = "";
+        }
+        router('/'+lowerCase);
+    }
 
     const profileMenuArray = [{icon: home_icon, text:'Home'},{icon: shorts_icon, text:'Shorts'},{icon: subscriptions_icon, text:'Subscriptions'}];
     const userMenuArray = [{icon: your_channel_icon, text:'Your channel'},{icon: history_icon, text:'History'},{icon: your_videos_icon, text:'Your videos'},{icon: watch_later_icon, text:'Watch Later'}];
@@ -18,15 +32,15 @@ function LeftMenu() {
                         <div className="side-menu">
                             <ul>
                                 {profileMenuArray.map(obj => (
-                                    <li><div><img src={obj.icon}/></div>{obj.text}</li>
+                                    <li onClick={() => goTo(obj.text)}><div><img src={obj.icon}/></div>{obj.text}</li>
                                 ))}
                             </ul>
                         </div>
                         <div className="side-menu">
-                            <h3>You <i class="fa-solid fa-chevron-right"></i></h3>
+                            <h3 onClick={() => goTo('you')}>You <i class="fa-solid fa-chevron-right"></i></h3>
                             <ul>
-                                {userMenuArray.map(obj => (
-                                    <li><div><img src={obj.icon}/></div>{obj.text}</li>
+                                {userMenuArray.map((obj,i)=> (
+                                    <li onClick={() => goTo(obj.text)}><div><img src={obj.icon}/></div>{obj.text}</li>
                                 ))}
                             </ul>
                         </div>

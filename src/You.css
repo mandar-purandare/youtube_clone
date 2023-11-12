@@ -1,0 +1,109 @@
+#you-profile{
+    width: 80%;
+    margin-left: 20%;
+    padding-top: 5%;
+    display: flex;
+    height: 12em;
+}
+
+#you-display-pic{
+    height: 60%;
+    width: 11%;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+#you-display-pic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#you-info{
+    height: 100%;
+    width: 80%;
+    text-align: left;
+    padding-left: 2%;
+}
+
+#you-info h1{
+    font-size: 2.2em;
+    margin-bottom: 0%;
+}
+
+#you-info p{
+    font-size: 0.8em;
+}
+
+.you-button-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#you-info button{
+    padding: 0.5em;
+    border-radius: 1.5em;
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+#you-video-categories{
+    width: 80%;
+    /* border: 1px solid black; */
+    margin-left: 20%;
+}
+
+.you-video-category-title{
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20%; */
+    width: 100%;
+    align-items: center;
+}
+
+.you-video-category-title p{
+    margin-right: 7%;
+}
+
+.you-video-grid{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
+.you-video-template{
+    width: 20%;
+    margin-bottom: 2%;
+}
+
+.you-video-template h5{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.you-video-template p{
+    font-size: 0.7em;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+
+.you-video-screen{
+    height: 7em;
+    width: 100%;
+}
+
+.you-video-screen img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25em;
+}
+
+.text-blue{
+    color: blue;
+}
