@@ -1,9 +1,9 @@
 .sign-in-container{
-    height: 605px;
+    height: 620px;
 }
 
 .sign-in-card{
-    height: 80%;
+    height: 87%;
     width: 33%;
     margin: auto;
     margin-top: 3%;
@@ -23,32 +23,24 @@
 }
 
 .email-phone-div{
-    border: 1px solid gray;
     border-radius: 0.25em;
     height: 12%;
     width: 80%;
     margin: auto;
-    margin-top: 7%;
+    margin-bottom: 7%;
+    
 }
 
 .email-phone-div input{
     float: left;
-    margin-left: 5%;
-    height: 50%;
-    margin-top: 2%;
-    width: 80%;
-    border: none;
-    outline: none;
+    border: 1px solid gray;
+    height: 100%;
+    width: 100%;
+    outline-color: blue;
+    border-radius: 0.5em;
 }
 
-.blue-border{
-    border: 1px solid blue;
-    /* border-radius: 0.25em;
-    height: 12%;
-    width: 80%;
-    margin: auto;
-    margin-top: 7%; */
-}
+
 
 .email-phone-div-blue input{
     float: left;

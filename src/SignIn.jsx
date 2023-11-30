@@ -1,30 +1,22 @@
-import { useState } from 'react'
 import './SignIn.css'
 import google_logo from './images/google_logo.png'
 
 function SignIn() {
 
-    const [border, setBorder] = useState('');
-
-    function blueBorder(e){
-        e.stopPropagation();
-        setBorder(border => border = 'blue-border');
-    }
-
-    function regularBorder(e){
-        e.stopPropagation();
-        setBorder(border => border = '');
-    }
+    
   return (
-    <div className='sign-in-container black-border' onClick={regularBorder}>
+    <div className='sign-in-container'>
         <div className='sign-in-card black-border'>
             <div id='google-logo'>
                 <img src={google_logo}/>
             </div>
             <h3>Sign in</h3>
             <p>to continue to YouTube</p>
-            <div className={`email-phone-div ${border}`} onClick={blueBorder}>
+            <div className={`email-phone-div`}>
                 <input type='text' placeholder='Email or phone'/>
+            </div>
+            <div className={`email-phone-div`}>
+                <input type='text' placeholder='password'/>
             </div>
             <p id='forgot-email'>Forgot email?</p>
             <p id='guest-mode'>Not your computer? Use Guest mode to sign in privately.</p>

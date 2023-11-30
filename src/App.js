@@ -5,6 +5,7 @@ import SignIn from './SignIn';
 import Video from './Video';
 import History from './History';
 import You from './You';
+import Register from './Register';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/video/:id' element={<Video/>}/>
         <Route exact path='/history' element={<History/>}/>
         <Route exact path='/you' element={<You/>}/>
+        <Route exact path='/register' element={<Register/>}/>
       </Routes>
     </div>
   );
