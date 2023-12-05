@@ -1,5 +1,6 @@
 import UserModel from "../Models/User.model.js";
 import bcrypt from 'bcrypt';
+import Jwt from "jsonwebtoken";
 
 export const Register = async (req, res) => {
     try{
@@ -41,7 +42,27 @@ export const Login = async (req,res) => {
         const checkPassword = await bcrypt.compare(password,user.password);
         if(!checkPassword) return res.status(401).json({success:false, message:'Password does not match'});
 
-        return res.status(200).json({success:true, message:'Login successfull', user:user});
+        const token = await Jwt.sign({id:user._id}, process.env.JWT_SECRET)
+
+        return res.status(200).json({success:true, message:'Login successfull', user:user, token});
+
+    }catch(error){
+        return res.status(500).json({success:false, message:error.message});
+    }
+}
+
+export const GetCurrentUser = async (req,res) => {
+    try{
+        const {token} = req.query;
+        if(!token) return res.status(401).json({success:false, message:"Token not provided"});
+
+        const userId = Jwt.verify(token, process.env.JWT_SECRET);
+        
+        const user = await UserModel.findById(userId.id);
+        if(!user) return res.status(404).json({success:false, message:"User not found"});
+        // console.log(user);
+
+        return res.status(200).json({success:true, user});
 
     }catch(error){
         return res.status(500).json({success:false, message:error.message});

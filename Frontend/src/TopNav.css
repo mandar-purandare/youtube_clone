@@ -66,7 +66,7 @@
     display: flex;
 }
 
-.top-nav-right > div{
+.top-nav-right > div:nth-child(1), .top-nav-right > div:nth-child(2), .user-logo-div{
     width: 13%;
     height: 80%;
     border-radius: 50%;
@@ -80,6 +80,19 @@
 .top-nav-right img{
     height: 80%;
     width: 80%;
+}
+
+.account-actions{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 1px solid black;
+}
+
+.welcome-div{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .black-border{
